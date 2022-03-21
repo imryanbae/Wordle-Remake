@@ -1,0 +1,37 @@
+.body {
+    background-color: #1f1f1f;
+    font-family: "Noto Sans", sans-serif, Arial;
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+body{
+}
+.box-ex{
+  width: 390px;
+  background-color: #1f1f1f;
+  margin: 0 auto;
+  padding: 5px;
+}
+.box{
+  width: 70px;
+  height: 75px;
+  line-height: 150px;
+  margin: 1.5px .5px;
+  display: inline-block;
+  background-color: #1f1f1f;   
+  /* border-radius: 10px;
+  border-style: solid */
+  border: 1px solid gray;
+  color: white;
+  text-align: center;
+}
+.box span{
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  bottom: 35px;
+}
+.box-cols{
+  margin: 0 auto !important;
+}
