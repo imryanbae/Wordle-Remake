@@ -13,11 +13,16 @@ function userword() {
 
 
 
- function keylog() {
-    document.getElementById(`userinput`).onkeydown = function(a) {
-        var av = a || event;
-        if (av.keyCode == 13) {
-            userword()
-        }
+
+document.getElementById('userinput').onkeydown = function(z){
+    if (z.keyCode >= 65 || z.keyCode <= 90){
+        var userinputjs = document.getElementById(`userinput`)
+
+        userinputjs.addEventListener('userinput', console.log(userinput.value));
+        document.getElementById('userinput').value='';
+
+        // console.log(userinputjs)
+
     }
-}
+ };
+

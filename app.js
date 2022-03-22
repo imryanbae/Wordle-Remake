@@ -21,6 +21,8 @@ function yes() {
 
 }
 
+
+
 function userword() {
     window.thing = document.getElementById("userinput").nodeValue;
     console.log(thing)
@@ -29,23 +31,27 @@ function userword() {
 
 
 
- function keylog() {
-    document.getElementById(`userinput`).onkeydown = function(a) {
-        var av = a || event;
-        if (av.keyCode == 13) {
-            userword()
-        }
+document.getElementById('userinput').onkeydown = function(z){
+    if (z.keyCode >= 65 || z.keyCode <= 90){
+        window.userinputjs = document.getElementById(`userinput`)
+
+        userinputjs.addEventListener('userinput', console.log(userinput.value));
+        document.getElementById('userinput').value='';
+
+        // console.log(userinputjs)
+
     }
-}
-
-function qasker() {
-    // question asker 
-    // window.askFirst = prompt(`Guess`)
-    window.arrayAnswer = thing.split("")
-    window.checker = trust.indexOf(ask)
+ };
 
 
-}
+// function qasker() {
+//     // question asker 
+//     // window.askFirst = prompt(`Guess`)
+//     window.arrayAnswer = userinputjs.split("")
+//     window.checker = trust.indexOf(ask)
+
+
+// }
         
 
 
