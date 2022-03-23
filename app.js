@@ -28,37 +28,94 @@ function userword() {
     console.log(thing)
 }
 
+function yes() {
+    document.getElementById("userinput").focus();
+
+}
 
 
-var inputarray = [``];
-document.getElementById('userinput').onkeydown = function(z){
-    if (z.keyCode >= 65 && z.keyCode <= 90 && z.keyCode != 8){
-        window.userinputjs = document.getElementById(`userinput`)
+var inputarray = [];
+// var userinputjs;
 
-        userinputjs.addEventListener('userinput', console.log(userinput.value));
-        inputarray.push(userinputjs.value)
+
+
+// document.getElementById('userinput').onkeydown = function(z){
+
+    
+
+
+//     if (z.keyCode >= 65 && z.keyCode <= 90){
+//         userinputjs = document.getElementById(`userinput`).value
+
+//         inputarray.push(userinputjs)
+
+//         console.log(inputarray)
+
+
+//         // console.log(userinputjs)
+
+//     } else if (z.keyCode == 8) {
+//         inputarray.pop(``);
+//         console.log(inputarray)
+//     }
+//     document.getElementById('userinput').value='';
+
+
+//     // document.getElementById('userinput').value='';
+
+//  };
+
+var key;
+var finalword
+var counterthing = 0;
+document.getElementById(`userinput`).onkeyup = function(z) {
+
+
+    if (z.keyCode >= 65 && z.keyCode <= 90) {
+        if (inputarray.length > 5) {
+            inputarray.pop()
+        } else if (inputarray.length < 5) {
+            key = document.getElementById("userinput").value
+
+            inputarray.push(key)
         
-        console.log(inputarray)
+            console.log(inputarray)
+            document.getElementById(`userinput`).value = ``;
+        }
 
-        // console.log(userinputjs)
 
-    } else if (z.keyCode == 8) {
+        
+    }  else (
+        document.getElementById(`userinput`).value = ``
+
+    ) 
+    if (z.keyCode == 8) {
         inputarray.pop(``);
         console.log(inputarray)
+    } 
+
+    if (inputarray.length == 5 && z.keyCode == 13) {
+        finalword = inputarray.join(``)
+        console.log(finalword)
+        inputarray = []
+        counterthing++;
     }
-    document.getElementById('userinput').value='';
+    arrayAnswer = finalword
 
- };
+    
 
-
-// function qasker() {
-//     // question asker 
-//     // window.askFirst = prompt(`Guess`)
-//     window.arrayAnswer = userinputjs.split("")
-//     window.checker = trust.indexOf(ask)
+}
 
 
-// }
+
+function qasker() {
+    // question asker 
+    // window.askFirst = prompt(`Guess`)
+    window.arrayAnswer = finalword.split("")
+    window.checker = trust.indexOf()
+
+
+}
         
 
 
