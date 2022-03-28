@@ -33,3 +33,7 @@
 .box-cols{
   margin: 0 auto !important;
 }
+
+#box {
+  color: white;
+}
