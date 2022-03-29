@@ -11,7 +11,7 @@ var wordThing = wordChoices[Math.floor(Math.random() * wordChoices.length)];
 let word = wordThing.toLowerCase();
 
 console.log(word)
-
+document.getElementById(`userinput`).focus()
 
 var array = word.split("");
 // console.log(array);
@@ -102,6 +102,7 @@ document.getElementById(`userinput`).onkeyup = function (z) {
         window.finalword = inputarray.join(``)
         console.log(finalword)
         inputarray = []
+        colorColumn = 1;
 
         if (trust.indexOf(finalword) != -1) {
             activeRow++;
@@ -136,6 +137,8 @@ function qasker() {
 
 function clogic() {
     var element = document.getElementById(`${colorRow}${colorColumn}`)
+    console.log(colorRow)
+    console.log(colorColumn)
 
     for (let i = 0; i < 5; i++) {
         if (checker == -1) {
