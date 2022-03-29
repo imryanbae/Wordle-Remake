@@ -27,6 +27,11 @@ function yes() {
 }
 
 
+var colorRow = 1;
+var colorColumn = 1;
+
+
+
 
 function userword() {
     window.thing = document.getElementById("userinput").nodeValue;
@@ -46,6 +51,9 @@ var key;
 var finalword
 var counterthing = 0;
 let timeout = 1;
+var activeThing
+var activeRow = 1;
+var activeColumn = 1;
 function reset() {
     document.getElementById(`userinput`).value = ``;
 }
@@ -53,7 +61,7 @@ function reset() {
 document.getElementById(`userinput`).onkeyup = function (z) {
 
 
-    if (z.keyCode >= 65 && z.keyCode <= 90) {
+    if (z.keyCode >= 65 && z.keyCode <= 90 && z.keyCode != 13 && z.keyCode != 8) {
         if (inputarray.length > 5) {
             inputarray.pop()
         } else if (inputarray.length < 5) {
@@ -65,7 +73,12 @@ document.getElementById(`userinput`).onkeyup = function (z) {
                 reset()
                 console.log(inputarray)
             }
-            document.getElementById(`box1`).innerHTML = key;
+            if (activeColumn <= 5 && key != ``) {
+                activeThing = document.getElementById(`${activeRow}${activeColumn}`)
+                activeThing.children[0].innerHTML = key;
+                
+                activeColumn++;
+            } 
         }
 
     }
@@ -73,12 +86,31 @@ document.getElementById(`userinput`).onkeyup = function (z) {
         inputarray.pop(``);
         document.getElementById(`userinput`).value = ``;
         console.log(inputarray)
+        if (activeColumn > 1) {
+            activeColumn--
+            activeThing = document.getElementById(`${activeRow}${activeColumn}`)
+
+            activeThing.children[0].innerHTML = "";
+            console.log(`active column = ${activeColumn}`)
+
+        }
+
+
+        
     }
     if (inputarray.length == 5 && z.keyCode == 13 && b < 6) {
         window.finalword = inputarray.join(``)
         console.log(finalword)
         inputarray = []
-        counterthing++;
+
+        if (trust.indexOf(finalword) != -1) {
+            activeRow++;
+            activeColumn = 1;
+            counterthing++;
+        }
+            
+
+       
         z = 1;
         start();
 
@@ -102,28 +134,37 @@ function qasker() {
 
 }
 
-
-
 function clogic() {
+    var element = document.getElementById(`${colorRow}${colorColumn}`)
+
     for (let i = 0; i < 5; i++) {
         if (checker == -1) {
             break;
         } else if (arrayAnswer[i] == array[i]) {
+            element.style.backgroundColor = "#2fb325"
+            colorColumn++
             console.log(`Letter ${arrayAnswer[i]} was correct. It is in the right spot.`)
         } else if (arrayAnswer[i] != array[i]) {
             var wrongSpot = array.indexOf(arrayAnswer[i])
 
 
             if (wrongSpot == -1) {
-
+                element.style.backgroundColor = "#c42c1b"
+                colorColumn++
                 console.log(`Letter ${arrayAnswer[i]} was entirely incorrect.`)
             } else {
                 var wrongSpot = array.indexOf(arrayAnswer[i])
 
+                element.style.backgroundColor = "#d4c715"
+                colorColumn++
+
                 console.log(`letter ${arrayAnswer[i]} is in the wrong spot.`)
             }
         }
+        element = document.getElementById(`${colorRow}${colorColumn}`)
+        
     }
+    colorRow++
 
 }
 
