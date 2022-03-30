@@ -101,7 +101,11 @@ document.getElementById(`userinput`).onkeyup = function (z) {
     if (inputarray.length == 5 && z.keyCode == 13 && b < 6 && win != 1) {
         window.finalword = inputarray.join(``)
         console.log(finalword)
+<<<<<<< HEAD
         
+=======
+        inputarray = []
+>>>>>>> 7a092112a833d9173cceba57da4f9cc919b2aeb7
         colorColumn = 1;
 
         if (trust.indexOf(finalword) != -1) {
