@@ -8,7 +8,7 @@
     }
     
 .body {
-    background-color: #1f1f1f;
+    background-color: #121213;
     font-family: wordle;
     font-size: 26px;
 
@@ -17,11 +17,16 @@
 
 
 
+
+
 .box-ex{
   width: 390px;
-  background-color: #1f1f1f;
+  background-color: #121213;
   margin: 0 auto;
   padding: 5px;
+    position:relative;
+  z-index: 100;
+  background-color: #121213;
 }
 .box{
   width: 70px;
@@ -29,7 +34,7 @@
   line-height: 135px;
   margin: 1.5px .5px;
   display: inline-block;
-  background-color: #1f1f1f;   
+  background-color: #121213;   
   /* border-radius: 10px;
   border-style: solid */
   border: 1px solid gray;
@@ -55,12 +60,4 @@
   z-index: 1;
   top: 50vh;
   left: 80vh;
-}
-
-
-.box-ex {
-  position:relative;
-  z-index: 100;
-  background-color: #1f1f1f;
-
 }

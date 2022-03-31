@@ -15356,9 +15356,10 @@ document.getElementById(`userinput`).onkeyup = function (z) {
             if (activeColumn <= 5 && key != ``) {
                 activeThing = document.getElementById(`${activeRow}${activeColumn}`)
                 activeThing.children[0].innerHTML = key.toUpperCase();
-                
+                activeThing.style.borderColor = "#565758";
                 activeColumn++;
             } 
+            
         }
 
     }
@@ -15372,6 +15373,7 @@ document.getElementById(`userinput`).onkeyup = function (z) {
 
             activeThing.children[0].innerHTML = "";
             console.log(`active column = ${activeColumn}`)
+            activeThing.style.borderColor = "gray";
 
         }
 
