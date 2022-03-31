@@ -15429,7 +15429,7 @@ function clogic() {
         if (checker == -1) {
             break;
         } else if (arrayAnswer[i] == array[i]) {
-            element.style.backgroundColor = "#96d4a7"
+            element.style.backgroundColor = "#538D4E"
             colorColumn++
             greenArr.push(arrayAnswer[i])
             console.log(greenArr)
@@ -15439,13 +15439,13 @@ function clogic() {
 
 
             if (wrongSpot == -1) {
-                element.style.backgroundColor = "#f5706c"
+                element.style.backgroundColor = "#3A3A3C"
                 colorColumn++
                 console.log(`Letter ${arrayAnswer[i]} was entirely incorrect.`)
             } else {
                 var wrongSpot = array.indexOf(arrayAnswer[i])
 
-                element.style.backgroundColor = "#d0d658"
+                element.style.backgroundColor = "#B59F3B"
                 colorColumn++
                 
                 console.log(`letter ${arrayAnswer[i]} is in the wrong spot.`)
@@ -15486,7 +15486,7 @@ function start() {
             if (word == finalword) {
                 console.log(`you win!`)
                 for (let g = 0; g < 6; g++) {
-                    document.getElementById(`${colorRow}${colorColumn}`).style.backgroundColor = "#96d4a7"
+                    document.getElementById(`${colorRow}${colorColumn}`).style.backgroundColor = "#538D4E"
                     colorColumn++
                     win = 1;
                     

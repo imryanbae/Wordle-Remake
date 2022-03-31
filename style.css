@@ -1,6 +1,16 @@
+ 
+
+    @font-face {
+    font-family: 'wordle';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Clear Sans Bold'), url('ClearSans-Bold.woff') format('woff');
+    }
+    
 .body {
     background-color: #1f1f1f;
-    font-family: "Noto Sans", sans-serif, Arial;
+    font-family: wordle;
+
 
 }
 
