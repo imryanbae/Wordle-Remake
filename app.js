@@ -15284,6 +15284,8 @@ var trust = ["aahed",
 // let trust = mustbereal.match(/.{1,5}/g)
 console.log(trust)
 var greenArr = []
+var grayArr = []
+var yellowArr = []
 
 // let trustF = trust.toLowerCase();
 // console.log(wordChoices.join(' '));
