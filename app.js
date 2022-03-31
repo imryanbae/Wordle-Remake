@@ -15383,7 +15383,6 @@ document.getElementById(`userinput`).onkeyup = function (z) {
         console.log(finalword)
         
 
-        
         colorColumn = 1;
 
         if (trust.indexOf(finalword) != -1) {
@@ -15426,6 +15425,8 @@ function clogic() {
     console.log(colorColumn)
 
     for (let i = 0; i < 5; i++) {
+                document.getElementById(`${colorRow}${colorColumn}`).style.borderColor = "#1f1f1f"  ;
+
         if (checker == -1) {
             break;
         } else if (arrayAnswer[i] == array[i]) {
@@ -15451,6 +15452,7 @@ function clogic() {
                 console.log(`letter ${arrayAnswer[i]} is in the wrong spot.`)
             }
         }
+
         element = document.getElementById(`${colorRow}${colorColumn}`)
         
     }
