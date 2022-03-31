@@ -1,4 +1,8 @@
-var wordChoices = ["cigar",
+
+
+
+var wordChoices = [                "cigar",
+
                 "rebut",
                 "sissy",
                 "humph",
@@ -15429,7 +15433,10 @@ function clogic() {
     console.log(colorColumn)
 
     for (let i = 0; i < 5; i++) {
+
                 document.getElementById(`${colorRow}${colorColumn}`).style.borderColor = "#1f1f1f";
+
+                document.getElementById(`${colorRow}${colorColumn}`).style.borderColor = "#1f1f1f"  ;
 
         if (checker == -1) {
             break;
