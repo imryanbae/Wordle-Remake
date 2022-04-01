@@ -15291,6 +15291,8 @@ var greenArr = []
 var grayArr = []
 var yellowArr = []
 
+var keyboardThing = document.getElementById(`${key}`)
+console.log(keyboardThing)
 // let trustF = trust.toLowerCase();
 // console.log(wordChoices.join(' '));
 var wordThing = wordChoices[Math.floor(Math.random() * wordChoices.length)];
@@ -15352,7 +15354,7 @@ document.getElementById(`userinput`).onkeyup = function (z) {
             inputarray.pop()
         } else if (inputarray.length < 5) {
             key = document.getElementById("userinput").value
-
+            
             if (key == ``) {
             } else {
                 inputarray.push(key)
@@ -15445,6 +15447,7 @@ function clogic() {
             colorColumn++
             greenArr.push(arrayAnswer[i])
             console.log(greenArr)
+            document.getElementById(`${arrayAnswer[i]}`).style.backgroundColor = `#538D4E`;
             console.log(`Letter ${arrayAnswer[i]} was correct. It is in the right spot.`)
         } else if (arrayAnswer[i] != array[i]) {
             var wrongSpot = array.indexOf(arrayAnswer[i])
@@ -15453,12 +15456,19 @@ function clogic() {
             if (wrongSpot == -1) {
                 element.style.backgroundColor = "#3A3A3C"
                 colorColumn++
+                grayArr.push(arrayAnswer[i])
+                console.log(grayArr)
+                document.getElementById(`${arrayAnswer[i]}`).style.backgroundColor = `#3A3A3C`;
                 console.log(`Letter ${arrayAnswer[i]} was entirely incorrect.`)
             } else {
                 var wrongSpot = array.indexOf(arrayAnswer[i])
 
                 element.style.backgroundColor = "#B59F3B"
-                colorColumn++
+                colorColumn++   
+                yellowArr.push(arrayAnswer[i])
+                console.log(yellowArr)
+                document.getElementById(`${arrayAnswer[i]}`).style.backgroundColor = `#B59F3B`;
+
                 
                 console.log(`letter ${arrayAnswer[i]} is in the wrong spot.`)
             }
