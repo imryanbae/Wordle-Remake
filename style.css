@@ -62,6 +62,20 @@
   left: 80vh;
 }
 
+nav {
+  color: white;
+  height: 3vh;
+  width: 100%;
+  /* background: red; */
+}
+
+#wordleheader {
+  position:relative;
+  left: 66.8vh;
+  bottom: 7vh;
+  /* background-color: red; */
+  width: 40%;
+}
 
 .keyboard {
 margin: auto;
