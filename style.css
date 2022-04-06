@@ -152,3 +152,53 @@ margin: auto;
 }
 
 
+
+@media screen and (max-width: 425px) {
+  .inputForm {
+    position:relative;
+    right: 50vh;
+  }
+
+  .body {
+    /* background-color: red; */
+  }
+
+
+  .box-ex {
+      position:relative;
+      left: 10vh;
+      top: 15vh;
+  }
+
+  .keyboard {
+    position: relative;
+    top: 20vh;
+    right: 14vh;
+    /* background-color: blue; */
+  }
+
+  .inputc {
+    position: relative;
+    right: 50vh;
+  }
+
+  nav {
+    /* background-color: blue;
+    position: relative; */
+    /* right: 30vh; */
+    /* width: 10%;
+    left: 0vh; */
+    display: none;
+  }
+
+  .navdiv {
+    background-color: green;
+    display: none;
+  }
+
+  #wordleheader {
+    font-size: 10px;
+    /* background-color: red; */
+  }
+} 
+

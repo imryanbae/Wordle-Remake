@@ -15505,6 +15505,8 @@ function counter() {
 
 }
 
+
+
 function start() {
             if (word == finalword) {
                 console.log(`you win!`)
